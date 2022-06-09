@@ -21,4 +21,12 @@ public class CubeControl : MonoBehaviour
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * v);
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * h);
     }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        if(coll.collider.CompareTag("BOX"))
+        {
+            Destroy(coll.gameObject);
+        }
+    }
 }
