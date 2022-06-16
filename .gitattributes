@@ -109,3 +109,4 @@
 *.skel.bytes        binary
 ```
 Assets/ImportedASSETS/22.fbx filter=lfs diff=lfs merge=lfs -text
+Assts/ImportedASSETS/22.fbx filter=lfs diff=lfs merge=lfs -text
