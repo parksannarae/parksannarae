@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - DUM
+  - CinemachineTarget
+  - Floor
+  - Item
+  - Tool
+  - Food
+  - GameObject
   layers:
   - Default
   - TransparentFX

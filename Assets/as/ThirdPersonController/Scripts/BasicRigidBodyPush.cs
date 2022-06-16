@@ -2,6 +2,27 @@
 
 public class BasicRigidBodyPush : MonoBehaviour
 {
+	public Item item;
+	public void SetItem(Item _item)
+	{
+		item.type = _item.type;
+	}
+
+	public Item GetItem()
+	{
+		return item;
+	}
+
+	public bool hasTool = false;
+	public bool hasFood = false;
+    // 캐릭터의 초기 값
+    public int gotTool = 0;
+    public int gotFood = 0;
+    
+    private int maxTool = 50;
+    private int maxFood = 40;
+
+	//
 	public LayerMask pushLayers;
 	public bool canPush;
 	[Range(0.5f, 5f)] public float strength = 1.1f;
@@ -31,5 +52,30 @@ public class BasicRigidBodyPush : MonoBehaviour
 
 		// Apply the push and take strength into account
 		body.AddForce(pushDir * strength, ForceMode.Impulse);
+	}
+	//추가 박산나래
+
+
+	private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Item") 
+        {
+           if(item.type == Type.Tool)
+		   {
+                gotTool++;
+                if (gotTool >= maxTool)
+				{
+                    hasTool = true;
+				}
+		   }
+		  else if( item.type == Type.Food)
+		  {
+                if (gotFood >= maxFood)
+			    {
+                    hasFood = true;
+			    }
+		    }
+		}
+		Destroy(other.gameObject);
 	}
 }
