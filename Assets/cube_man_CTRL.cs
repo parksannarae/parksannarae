@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeCtrl : MonoBehaviour
+public class cube_man_CTRL : MonoBehaviour
 {
-    // Start is called before the first frame update
- 
- 
-    public float moveSpeed = 30.0f;
-    public float turnSpeed = 10.0f;
+    public float moveSpeed = 10.0f;
+    public float turnSpeed = 80.0f;
 
     private float h;
     private float v;
@@ -26,14 +21,4 @@ public class CubeCtrl : MonoBehaviour
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * v);
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * h);
     }
-
-    void OnCollisionEnter(Collision coll)
-    {
-        if(coll.collider.CompareTag("BOX"))
-        {
-            Destroy(gameObject);
-        }
-    }
 }
-    
-
