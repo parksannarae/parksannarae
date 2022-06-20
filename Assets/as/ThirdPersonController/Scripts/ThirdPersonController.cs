@@ -15,9 +15,8 @@ namespace StarterAssets
     public class ThirdPersonController : MonoBehaviour
     {
         [Header("Player")]
-        //추가psnr
+        // 캐릭터의 초기 값
          public bool[] hasItem;
-// 캐릭터의 초기 값
          public int Tool;
          public int Food;
     
