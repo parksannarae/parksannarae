@@ -15,6 +15,18 @@ namespace StarterAssets
     public class ThirdPersonController : MonoBehaviour
     {
         [Header("Player")]
+        // 캐릭터의 초기 값
+         public bool[] hasItem;
+         public int Tool;
+         public int Food;
+    
+         public int maxTool;
+         public int maxFood;
+
+        
+        //추가psnr
+        
+ 
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
 

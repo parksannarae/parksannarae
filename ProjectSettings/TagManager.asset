@@ -5,6 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - DUM
+  - CinemachineTarget
+  - Floor
+  - Item
+  - Tool
+  - Food
+  - GameObject
+  - Enemy
+  - Enemy Bullet
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -12,6 +21,8 @@ TagManager:
   - 
   - Water
   - UI
+  - Enemy
+  - Enemy Bullet
   - 
   - 
   - 
@@ -32,12 +43,10 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HandPlayer
+  - Hand
+  - Grabbable
+  - Grabbing
   m_SortingLayers:
   - name: Default
     uniqueID: 0
